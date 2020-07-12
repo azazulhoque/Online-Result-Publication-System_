@@ -1,0 +1,45 @@
+{% load static %}
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
+            </li>
+
+             <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Administration
+            </a>
+                <ul class="nav-dropdown-items">
+
+              
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'teacher-list' %}">
+                            <i class="nav-icon icon-puzzle"></i> Exam Committe</a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
+
+            <li class="nav-item nav-dropdown">
+
+              <a class="nav-link" href="{% url 'search-result' %}">
+                 <strong style="color:#EE19F5
+
+ ";><i class="nav-icon icon-puzzle"></i> Result Board</a></strong>
+
+
+            <li class="nav-item nav-dropdown">
+
+              <a class="nav-link" href="{% url 'login' %}">
+                <i class="nav-icon icon-puzzle"></i> Registration</a>
+        </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+    {% block sidebar %}
+    {% endblock %}
+</div>

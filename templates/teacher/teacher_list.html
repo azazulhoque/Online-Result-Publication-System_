@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers List</title>
+</head>
+<body>
+
+</body>
+</html>{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i> Teachers List</div>
+    <div class="card-body">
+        <table class="table table-responsive-sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Designation</th>
+
+                <th>Mobile No</th>
+
+                <th>Email</th>
+
+              </tr>
+            </thead>
+            {% for teacher in teachers %}
+    <tr>
+
+      <td>{{ teacher.id }}</td>
+      <td>{{ teacher.name }}</td>
+      <td>{{ teacher.designation }}</td>
+        <td>{{ teacher.mobile}}</td>
+        <td>{{ teacher.email }}</td>
+
+
+    </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+</div>
+
+{% endblock %}
